@@ -11,6 +11,13 @@ class Pessoa {
             this.saldo += valor
         }
     }
+
+    sacar (valor){
+        if (valor <= this.saldo){
+            this.saldo -= valor
+        }
+    }
+
 }
 
 class ClientePoupanca extends Cliente {
