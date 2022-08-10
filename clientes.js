@@ -30,17 +30,18 @@ function Cliente (nome, cpf, email, saldo) {
 }
 
 
-function ClientePoupanca (nome, cpf, email, saldo, saldoPoup)
-{
-    Cliente.call(this,nome, cpf, email, saldo )
-    this.saldoPoup = saldoPoup
+class ClientePoupanca {
+    constructor(nome, cpf, email, saldo, saldoPoup) {
+        Cliente.call(this, nome, cpf, email, saldo)
+        this.saldoPoup = saldoPoup
+    }
+    //criando método "Despositar Poupança" para 'ClientePoupanca'
+    depositarPoup(valor) {
+        this.saldoPoup += valor
+    }
 }
 
 
-//criando método "Despositar Poupança" para 'ClientePoupanca'
-ClientePoupanca.prototype.depositarPoup = function (valor){
-    this.saldoPoup += valor
-}
 
 
 
